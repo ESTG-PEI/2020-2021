@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           xmlns="http://www.ipp.pt/common"
+           targetNamespace="http://www.ipp.pt/common">
+
+    <xs:simpleType name="escolas">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ESTG"/>
+            <xs:enumeration value="ESIEG"/>
+            <xs:enumeration value="ISEP"/>
+            <xs:enumeration value="ISCAP"/>
+            <xs:enumeration value="ESMAD"/>
+            <xs:enumeration value="ESE"/>
+            <xs:enumeration value="ESMAE"/>
+            <xs:enumeration value="ESS"/>
+            <xs:enumeration value="ESHT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

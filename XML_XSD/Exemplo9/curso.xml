@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ipp:curso codigo="LEI" escola="ESTG" ano="2017" nivel="Licenciatura" tipo="Diurno"
+    
+    xmlns:ipp="http://www.ipp.pt"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ipp.pt cursos.xsd">
+
+    <nome>Informática</nome>
+    <coordenador>Ricardo Santos</coordenador>
+    
+    <unidades>
+        
+        <unidade codigo="PEI" creditos="6">
+            <nome>Processamento Estruturarado de Informacao</nome>
+            <regente>Bruno Oliveira</regente>
+            <docentes>
+                <nome tipologia="teorica">Bruno Oliveira</nome>
+                <nome tipologia="pratica">Manuel Rodrigues</nome>
+                <nome tipologia="pratica">Oscar Oliviera</nome>
+            </docentes>
+        </unidade>
+		
+		<unidade codigo="PII" creditos="5">
+            <nome>Estruturas de dados</nome>
+            <regente>Ricardo Santos</regente>
+            <docentes>
+                <nome tipologia="teorica">Ricardo Santos</nome>
+                <nome tipologia="pratica">Bruno Oliveira</nome>
+            </docentes>
+        </unidade>
+        
+    </unidades>
+
+</ipp:curso>

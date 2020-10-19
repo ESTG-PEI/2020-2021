@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+   
+    <xs:complexType name = "infoPessoa"> <!-- tipo global (podem ser reutilizados) -->
+        <xs:sequence> <!-- Indicador de ordem -->
+            <xs:element name = "primeiroNome" type = "xs:string" />
+            <xs:element name = "ultimoNome" type = "xs:string" />
+        </xs:sequence>
+        <!-- Atributo com restrição em que pode ser M ou F -->
+        <xs:attribute name = "genero" type = "tipoGenero" />
+    </xs:complexType>
+    
+    <xs:simpleType name="tipoGenero">
+        <xs:restriction base = "xs:string">
+            <xs:enumeration value="M" />
+            <xs:enumeration value="F" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name = "pessoa" type = "infoPessoa" />
+</xs:schema>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ipp:curso escola="ESTG" ano="2017" xmlns:ipp="http://www.ipp.pt"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.ipp.pt curso.xsd">
+
+    <nome>Informática</nome>
+    <coordenador>Ricardo Santos</coordenador>
+    
+    <unidades>
+
+        <unidade>PEI</unidade>
+        <unidade>PI</unidade>
+        <unidade>PII</unidade>
+        
+    </unidades>
+
+</ipp:curso>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emails xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="Exemplo6.xsd"> <!-- Um número inderteminado de elementos -->
+    <email type="Personal"> <!-- to, from, heading e body são obrigatórios e devem estar por esta ordem-->
+        <to>Tove@gmail.com</to>
+        <from>Jani@gmail.com</from>
+        <date format="yyyy-mm-ddThh:mm:ss">2017-10-02T12:35:00</date> <!-- Opcional, colocado a seguir ao elemento from -->
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+    <email type="Personal">
+        <to>Tove@gmail.com</to>
+        <from>Jani@gmail.com</from>
+        <date format="yyyy-mm-ddThh:mm:ss">2017-10-02T12:55:00</date>
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+    <email type="Professional">
+        <to>Tove@gmail.com</to>
+        <from>Jani@gmail.com</from>
+        <date format="yyyy-mm-ddThh:mm:ss">2017-10-02T16:15:00</date>
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+    <email type="Personal">
+        <to>Tove@gmail.com</to>
+        <from>Jani@gmail.com</from>
+        <date format="yyyy-mm-ddThh:mm:ss">2017-10-02T19:35:00</date>
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+</emails>

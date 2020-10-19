@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  
+    <xs:simpleType name = "tipoNome"> <!-- tipo global -->
+        <xs:restriction base= "xs:string">
+            <xs:pattern value="[a-zA-Z]*"></xs:pattern>
+            <xs:minLength value="1"></xs:minLength> <!-- pelo menos 1 caracter (que também poderia ser forçado através da expressão regular: [a-zA-Z]* -->
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:element name="pessoa">
+      <xs:complexType> <!-- Tipo local (não podem ser reutilizados) -->
+          <xs:sequence>
+              <xs:element name = "primeiroNome" type = "tipoNome" />
+              <xs:element name = "ultimoNome" type = "tipoNome"/>
+          </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+</xs:schema>

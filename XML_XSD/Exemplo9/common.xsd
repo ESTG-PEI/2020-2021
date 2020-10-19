@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.ipp.pt/common" xmlns="http://www.ipp.pt/common">
+
+    <xs:simpleType name="descricao">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="256"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="codigos">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="4"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="niveis">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Licenciatura"/>
+            <xs:enumeration value="Mestrado"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipos">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Diurno"/>
+            <xs:enumeration value="Noctuno"/>
+            <xs:enumeration value="E-Learning"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipologias">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="teorica"/>
+            <xs:enumeration value="pratica"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

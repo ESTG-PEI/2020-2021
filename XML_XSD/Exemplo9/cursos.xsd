@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ipp="http://www.ipp.pt">
+    
+    <xs:import schemaLocation="curso.xsd" namespace="http://www.ipp.pt"/>    
+
+    <xs:element name="cursos">
+        <xs:complexType>            
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="curso" type="ipp:curso"/>              
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>  
+    
+</xs:schema>

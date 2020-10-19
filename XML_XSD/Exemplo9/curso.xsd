@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://www.ipp.pt"
+           xmlns="http://www.ipp.pt"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:c="http://www.ipp.pt/common">
+    
+    <xs:import schemaLocation="common.xsd" namespace="http://www.ipp.pt/common"/>
+
+    <xs:simpleType name="escolas">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ESTG"/>
+            <xs:enumeration value="ESIEG"/>
+            <xs:enumeration value="ISEP"/>
+            <xs:enumeration value="ISCAP"/>
+            <xs:enumeration value="ESMAD"/>
+            <xs:enumeration value="ESE"/>
+            <xs:enumeration value="ESMAE"/>
+            <xs:enumeration value="ESS"/>
+            <xs:enumeration value="ESHT"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="docentes">
+        <xs:simpleContent>
+            <xs:extension base="c:descricao">
+                <xs:attribute name="tipologia" type="c:tipologias" use="required"/>
+            </xs:extension>            
+        </xs:simpleContent> 
+    </xs:complexType>
+    
+    <xs:complexType name="unidades">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="regente" type="xs:string"/>
+            <xs:element name="docentes">
+                <xs:complexType>
+                    <xs:sequence maxOccurs="unbounded">
+                        <xs:element name="nome" type="docentes"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="codigo" type="c:codigos" use="required"/>
+        <xs:attribute name="creditos" type="xs:integer" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="curso">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="coordenador" type="xs:string"/>
+            <xs:element name="unidades">
+                <xs:complexType>
+                    <xs:sequence minOccurs="1" maxOccurs="unbounded">
+                        <xs:element name="unidade" type="unidades"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="ano" type="xs:gYear" use="required"/>
+        <xs:attribute name="codigo" type="c:codigos" use="required"/>
+        <xs:attribute name="escola" type="escolas" use="required"/>
+        <xs:attribute name="nivel" type="c:niveis" default="Licenciatura"/>
+        <xs:attribute name="tipo" type="c:tipos" default="Diurno"/>
+    </xs:complexType>
+    
+    <xs:element name="curso" type="curso" />
+           
+</xs:schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pessoas xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "Exemplo5.xsd">
+    <pessoa genero = "M">
+        <primeiroNome>Bruno</primeiroNome>
+        <ultimoNome>Oliveira</ultimoNome>
+    </pessoa>
+    <pessoa genero = "M">
+        <primeiroNome>Bruno</primeiroNome>
+        <ultimoNome>Oliveira</ultimoNome>
+    </pessoa>
+    <pessoa genero = "M">
+        <primeiroNome>Bruno</primeiroNome>
+        <ultimoNome>Oliveira</ultimoNome>
+    </pessoa>
+</pessoas>

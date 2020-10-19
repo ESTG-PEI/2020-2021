@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- root -->
+    <xs:element name="emails" type="tipoEmail" />
+    
+    <!-- Tipo global -->
+    <xs:complexType name="tipoEmail">
+        <xs:sequence>
+            <xs:element name="email" maxOccurs="unbounded">
+                <xs:complexType> <!-- Tipo de elemento --> <!-- tipo local -->
+                    <xs:sequence> <!-- Indicador de ordem -->
+                        <xs:element name="to" type="validacaoEmail" />
+                        <xs:element name="from" type="validacaoEmail" />
+                        <xs:element name="date" type="tipoDataEmail" minOccurs="0" /> <!-- minOccurs - indicador de ocorrência -->
+                        <xs:element name="heading" type="xs:string" />
+                        <xs:element name="body" type="xs:string" />
+                    </xs:sequence>
+                    <xs:attribute name="type" type="validacaoTipoEmail" use="required">
+                    </xs:attribute>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <!-- Tipo global -->
+    <xs:complexType name="tipoDataEmail">
+        <xs:simpleContent>
+            <xs:extension base="xs:dateTime">
+                <xs:attribute name="format" type="xs:string" fixed="yyyy-mm-ddThh:mm:ss" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    
+    <!-- Tipo global -->
+    <xs:simpleType name="validacaoTipoEmail"> 
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Personal" />
+            <xs:enumeration value="Professional" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Tipo global -->
+    <xs:simpleType name="validacaoEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+@.+\..+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+</xs:schema>
