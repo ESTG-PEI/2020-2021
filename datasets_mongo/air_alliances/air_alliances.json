@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "5980bef9a39d0ba3c650ae9b"
+  },
+  "name": "Star Alliance",
+  "airlines": [
+    "Air Canada",
+    "Adria Airways",
+    "Avianca",
+    "Scandinavian Airlines",
+    "All Nippon Airways",
+    "Brussels Airlines",
+    "Shenzhen Airlines",
+    "Air China",
+    "Air New Zealand",
+    "Asiana Airlines",
+    "Copa Airlines",
+    "Croatia Airlines",
+    "EgyptAir",
+    "TAP Portugal",
+    "United Airlines",
+    "Turkish Airlines",
+    "Swiss International Air Lines",
+    "Lufthansa",
+    "EVA Air",
+    "South African Airways",
+    "Singapore Airlines"
+  ]
+},{
+  "_id": {
+    "$oid": "5980bef9a39d0ba3c650ae9c"
+  },
+  "name": "SkyTeam",
+  "airlines": [
+    "Aeroflot",
+    "Aerolinias Argentinas",
+    "Aeromexico",
+    "Air Europa",
+    "Air France",
+    "Alitalia",
+    "China Airlines",
+    "China Eastern Airlines",
+    "China Southern Airlines",
+    "Czech Airlines",
+    "Delta Air Lines",
+    "Garuda Indonesia",
+    "Kenya Airways",
+    "KLM",
+    "Korean Air",
+    "Middle East Airlines",
+    "Saudia",
+    "TAROM",
+    "Vietnam Airlines",
+    "Xiamen Airlines"
+  ]
+},{
+  "_id": {
+    "$oid": "5980bef9a39d0ba3c650ae9d"
+  },
+  "name": "OneWorld",
+  "airlines": [
+    "Air Berlin",
+    "American Airlines",
+    "British Airways",
+    "Cathay Pacific",
+    "Finnair",
+    "Iberia Airlines",
+    "Japan Airlines",
+    "LATAM Chile",
+    "LATAM Brasil",
+    "Malaysia Airlines",
+    "Canadian Airlines",
+    "Qantas",
+    "Qatar Airways",
+    "Royal Jordanian",
+    "SriLankan Airlines",
+    "S7 Airlines"
+  ]
+}]
